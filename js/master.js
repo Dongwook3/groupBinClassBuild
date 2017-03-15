@@ -12,14 +12,14 @@
 		.done(function(data) {
 			console.log(data);
 
-			/*if (data) {
+			if (data && data != "nulll") {
 				data = JSON.parse(data);
-				renderCarInfor(data);
+				renderCarInfo(data);
 			} else {
 				alert('your ajax call didn\'t work');
-			}*/
-			data = JSON.parse(data);
-			renderCarInfo(data);
+			}
+			/*data = JSON.parse(data);
+			renderCarInfo(data);*/
 		}) // don't put a semicolon here either!
 
 		.fail(function(ajaxCall, status, error) {
