@@ -1,4 +1,7 @@
 (function() {
+	var selectedCar, saveButton = document.querySelector('.fa-download').parentNode; 
+	// parentNode is the element's "wrapper" (wahtever it's nested in)
+	// 
 	// expanded AJAX example
 	$('.thumbInfo img').on('click', function() {
 
@@ -13,6 +16,8 @@
 			console.log(data);
 
 			if (data && data != "nulll") {
+				selectedCar = data;
+
 				data = JSON.parse(data);
 				renderCarInfo(data);
 			} else {
@@ -37,4 +42,11 @@
 			$('.modelDetails').text(car.modelDetails);
 		}
 	});
+	
+	function saveData() {
+		debugger;
+	}
+
+	saveButton.addEventListener('click', saveData, false);
+
 })();
